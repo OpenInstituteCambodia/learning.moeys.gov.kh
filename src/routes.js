@@ -1,7 +1,7 @@
 import Router from 'vue-router';
 
 // Pages
-import IndexPage from './components/Index.vue'
+import IndexPage from './pages/Index.vue'
 
 const router = new Router({
     routes: [

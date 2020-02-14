@@ -1,6 +1,6 @@
 .moeys {
     &__logo {
-        width: 40%;
+        width: 46%;
         margin-bottom: 1em;
 
         @media (min-width: 576px) {
@@ -9,11 +9,13 @@
     }
 
     &__infoboard {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     &__button {
         width: 40%;
+        font-size: 1.6rem;
+        font-weight: bold;
 
         @media (min-width: 576px) {
             width: 25%;

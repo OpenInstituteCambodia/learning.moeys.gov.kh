@@ -2,16 +2,16 @@
     <div class="row align-items-center">
         <div class="col-12">
             <img class="moeys__logo" src="@/assets/logo.png" :alt="content.slogan">
+            <h5 class="text-dark w-75 mb-5 mx-auto"><strong>{{ content.slogan }}</strong></h5>
         </div>
         <div class="col-12">
-            <p>{{ content.slogan }}</p>
             <h1 class="h2">{{ content.title }}</h1>
         </div>
         <div class="col-12">
             <div class="my-4">
-                <button class="btn btn-warning btn-lg w-25">Register</button>
+                <button class="btn btn-warning btn-lg moeys__button">Register</button>
                 <span class="mx-2"></span>
-                <button class="btn btn-info btn-lg w-25">Moodle</button>
+                <button class="btn btn-info btn-lg moeys__button">Moodle</button>
             </div>
         </div>
         <div class="col-12">
@@ -43,7 +43,7 @@ export default {
     .moeys {
         &__logo {
             width: 40%;
-            margin-bottom: 2em;
+            margin-bottom: 1em;
 
             @media (min-width: 576px) {
                 width: 16%;
@@ -52,6 +52,14 @@ export default {
 
         &__infoboard {
             font-size: 1rem;
+        }
+
+        &__button {
+            width: 40%;
+
+            @media (min-width: 576px) {
+                width: 25%;
+            }
         }
     }
 </style>

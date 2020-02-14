@@ -1,4 +1,7 @@
+import Vue from 'vue'
 import Router from 'vue-router';
+
+Vue.use(Router)
 
 // Pages
 import IndexPage from './pages/Index.vue'

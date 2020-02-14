@@ -9,9 +9,9 @@
         </div>
         <div class="col-12">
             <div class="my-4">
-                <button class="btn btn-warning btn-lg moeys__button">Register</button>
+                <button @click="gotoAuthRegister" class="btn btn-warning btn-lg moeys__button">Register</button>
                 <span class="mx-2"></span>
-                <button class="btn btn-info btn-lg moeys__button">Moodle</button>
+                <button @click="gotoMoodle" class="btn btn-info btn-lg moeys__button">Moodle</button>
             </div>
         </div>
         <div class="col-12">
@@ -34,6 +34,18 @@ export default {
                     "Once you register, you can just sign-in in any of the Educational Services available in the MoEYS website. At this time, registration is only required to take courses stored in the MoEYS Moodle Course Management System."
                 ]
             }
+        }
+    },
+    methods: {
+        gotoAuthRegister() {
+            const endpoint = "https://auth.moeys.gov.kh/identity/register.htm";
+
+            open(endpoint);
+        },
+        gotoMoodle() {
+            const endpoint = "https://moodle.moeys.gov.kh/";
+
+            open(endpoint);
         }
     }
 }

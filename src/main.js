@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 const application = new Vue({
   metaInfo: {
     title: 'Leanring Platform',
-    titleTemplate: '%s - MoEYS!',
+    titleTemplate: '%s - MoEYS',
     htmlAttrs: {
       lang: 'en',
     }

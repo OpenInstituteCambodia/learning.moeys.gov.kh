@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <Index />
   </div>
 </template>
@@ -25,3 +25,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+<style lang="scss" src="@/scss/app.scss"></style>

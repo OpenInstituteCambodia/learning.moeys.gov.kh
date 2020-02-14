@@ -1,11 +1,21 @@
 <template>
-    <div style="width: 100%">
-        <div style="margin: 0 auto; width: 75%">
-            <img src="../assets/logo.png" :alt="localization.en.slogan" width="16%">
-            <p>{{ localization.en.slogan }}</p>
-            <h1>{{ localization.en.title }}</h1>
-
-            <div v-for="(info, i) in localization.en.informations" :key="i">
+    <div class="row align-items-center">
+        <div class="col-12">
+            <img class="moeys__logo" src="@/assets/logo.png" :alt="content.slogan">
+        </div>
+        <div class="col-12">
+            <p>{{ content.slogan }}</p>
+            <h1 class="h2">{{ content.title }}</h1>
+        </div>
+        <div class="col-12">
+            <div class="my-4">
+                <button class="btn btn-warning btn-lg w-25">Register</button>
+                <span class="mx-2"></span>
+                <button class="btn btn-info btn-lg w-25">Moodle</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="moeys__infoboard" v-for="(info, i) in content.infoboard" :key="i">
                 <p>{{ info }}</p>
             </div>
         </div>
@@ -29,6 +39,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+    .moeys {
+        &__logo {
+            width: 40%;
+            margin-bottom: 2em;
 
+            @media (min-width: 576px) {
+                width: 16%;
+            }
+        }
+
+        &__infoboard {
+            font-size: 1rem;
+        }
+    }
 </style>

@@ -38,28 +38,3 @@ export default {
     }
 }
 </script>
-
-<style lang="scss">
-    .moeys {
-        &__logo {
-            width: 40%;
-            margin-bottom: 1em;
-
-            @media (min-width: 576px) {
-                width: 16%;
-            }
-        }
-
-        &__infoboard {
-            font-size: 1rem;
-        }
-
-        &__button {
-            width: 40%;
-
-            @media (min-width: 576px) {
-                width: 25%;
-            }
-        }
-    }
-</style>

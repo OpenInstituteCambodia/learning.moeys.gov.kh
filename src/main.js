@@ -1,7 +1,8 @@
 import Vue from 'vue'
-import App from '@/App.vue'
-import { router } from '@/routes';
 import VueMeta from 'vue-meta'
+
+import { router } from '@/routes';
+import App from '@/App.vue'
 
 Vue.use(VueMeta, {
   // optional pluginOptions
@@ -20,4 +21,10 @@ const application = new Vue({
   },
   router,
   render: h => h(App),
-}).$mount('#app')
+})
+
+application.$mount('#app')
+
+if (process.env.NODE_ENV === 'development') {
+  window['#app'] = application
+}

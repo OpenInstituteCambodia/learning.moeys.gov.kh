@@ -21,6 +21,7 @@
 
     cd {{ $source_dir }}
 
+    echo "-----> Fetching new changes..."
     if [ -d ".git" ]; then
         git pull origin master --rebase
     else
@@ -29,5 +30,22 @@
 @endtask
 
 @task('build')
-    ./deploy.sh
+    cd {{ $source_dir }}
+
+    echo "-----> Installing dependencies..."
+    yarn
+
+    echo "-----> Building production application..."
+    yarn build
+
+    {{-- Create deploy directory if not exist --}}
+    if [ ! -d "{{ $deploy_dir }}" ]; then
+        mkdir -p {{ $deploy_dir }}
+    fi
+
+    echo "-----> Copying distribution asset..."
+    cp -r {{ $source_dir }}/dist/* {{ $deploy_dir }}
+    cd {{ $deploy_dir }}
+    ls -la
+    echo "-----> Deploy complete successfully"
 @endtask

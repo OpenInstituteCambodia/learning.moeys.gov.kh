@@ -6,8 +6,15 @@
 
 <script>
 export default {
-  name: 'App',
-}
+  metaInfo: {
+    title: "Learning Platform",
+    titleTemplate: "%s - MoEYS",
+    htmlAttrs: {
+      lang: "en"
+    }
+  },
+  name: "App"
+};
 </script>
 
 <style>
